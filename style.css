@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(0px, 90px);
+    transform: translate(0px, 30px);
 }
 
 .text p {
