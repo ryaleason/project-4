@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#87CEEB, white);
+    transition: background 10s ease, background-color 2s ease;
+}
+
+.container {
+    background: url(pohon.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    transition: background 2s ease;
+}
+
+.sun {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 83);
+    box-shadow: 1px 1px 50px 20px rgb(212, 255, 0);
+    border-radius: 50%;
+    transform: translate(50px, 30px);
+    transition: transform 2s ease, box-shadow 2s ease;
+}
+
+.moon {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(220, 220, 220);
+    box-shadow: 1px 1px 50px 20px rgb(56, 86, 198);
+    border-radius: 50%;
+    transform: translate(300px, -400px);
+    transition: transform 2s ease, box-shadow 2s ease;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0px, 90px);
+}
+
+.text p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.hilang {
+    display: none;
+}
+
+.light {
+    color: white;
+    transition: color 1s ease;
+}
+
+.muter {
+    animation: muter;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes muter {
+    0% {
+        transform: translateY(50px, 30px);
+    }
+
+    50% {
+        transform: translate(50px, 35px);
+    }
+
+    100% {
+        transform: translateY(50px, 25px);
+    }
+}
+
+.keluar {
+    animation: keluar;
+    animation-duration: 2s;
+    transform: translate(-180px, 200px);
+    transition-duration: 2s;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 83);
+    border-radius: 50%;
+    transition: transform 2s ease, box-shadow 2s ease;
+}
+
+@keyframes keluar {
+    from {
+        transform: translate(50px, 30px);
+        border-radius: 50%;
+        box-shadow: 1px 1px 50px 20px rgb(212, 255, 0);
+
+    }
+
+    to {
+        transform: translate(-180px, 200px);
+        box-shadow: 1px 1px 30px 1px rgb(212, 255, 0);
+    }
+}
+
+.masuk {
+    transform: translate(50px, -40px);
+    animation: masuk;
+    animation-duration: 2s;
+    transition: transform 2s ease, box-shadow 2s ease;
+}
+
+@keyframes masuk {
+    0% {
+        transform: translate(300px, -400px);
+    }
+
+    100% {
+        transform: translate(50px, -40px);
+    }
+}
+
+.gerak {
+    animation: gerak;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes gerak {
+    0% {
+        transform: translateY(50px, -38px);
+    }
+
+    50% {
+        transform: translate(50px, -45px);
+    }
+
+    100% {
+        transform: translateY(50px, -42px);
+    }
+}

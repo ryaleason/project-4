@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container">
+            <div class="sun muter"></div>
+            <div class="moon"></div>
+            <div class="text">
+                <span id="teks1" class="zoomIn slide-left">
+                    <p>Halooo ... <br>coba lihat ini</p>
+                </span>
+                <span id="teks2" class="hilang zoomIn">
+                    <p>Coba luangin waktu sebentar,<br>lihat Pohonnya </p>
+                </span>
+                <span id="teks3" class="hilang zoomIn">
+                    <p>Suka gak ?</p>
+                </span>
+                <span id="teks4" class="hilang zoomIn">
+                    <p>Cantik yaa pohonnya</p>
+                </span>
+                <span id="teks5" class="hilang zoomIn">
+                    <p>Warnanya Ungu </p>
+                </span>
+                <span id="teks6" class="hilang zoomIn">
+                    <p>Daunnya hijau</p>
+                </span>
+                <span id="teks7" class="hilang zoomIn">
+                    <p>Yaudah cuma ngasih info</p>
+                </span>
+                <span id="teks8" class="hilang zoomIn">
+                    <p>Pohonnya b aja kata anas</p>
+                </span>
+                <span id="teks9" class="hilang zoomIn">
+                    <p>Tpi ya klo kamu tau,  <br>pohon ini lebih <br>cantik ketika malam</p>
+                </span>
+                <span id="teks10" class="hilang zoomIn">
+                    <p>Oke tunggu sampe malam...</p>
+                </span>
+                <span id="teks11" class="hilang zoomIn">
+                    <p>gaje lek</p>
+                </span>
+                <span id="teks12" class="hilang zoomIn">
+                    <p>Alamak kelamaan nunggu malam<br>Nih tak kasih kekuatan</p>
+                </span>
+                <span id="teks13" class="hilang zoomIn">
+                    <p>Hiyak hiyak set set <br>fuhhh</p>
+                </span>
+                <span id="teks14" class="hilang zoomIn">
+                    <p>dah tu<br>coba pencet mataharinya</p>
+                </span>
+                <span id="teks15" class="hilang zoomIn">
+                    <p>sulapan bosku</p>
+                </span>
+                <span id="teks16" class="hilang zoomIn">
+                    <p>gimana cantik gak ?</p>
+                </span>
+                <span id="teks17" class="hilang zoomIn">
+                    <p>this is menyala abangkuh</p>
+                </span>
+                <span id="teks18" class="hilang zoomIn">
+                    <p>Pohonnya bakal bersinar <br> kalo malam hari</p>
+                </span>
+                <span id="teks19" class="hilang zoomIn">
+                    <p>tpi kelihatan msih sepi ya.. ?</p>
+                </span>
+                <span id="teks20" class="hilang zoomIn">
+                    <p>langitnya juga masih sepi <br> bet</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p>hmmm kan ini temanya Keindahan <br> dimalam hari</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p>jadiii harus ada bintangnya juga <br>dan sekalian aku mau <br>beri kejutan</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p>meskipun gak bikin kmu kagum tpii , <br>mungkin kamu suka</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p>u ready ?</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p style="font-size: 22px;">3</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p style="font-size: 22px;">2</p>
+                </span>
+                <span id="teks21" class="hilang zoomIn">
+                    <p style="font-size: 22px;">1</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.querySelector('.container');
+        const texts = document.querySelectorAll('.text span');
+        let currentIndex = 0;
+        const sun = document.querySelector('.sun');
+        const bg = document.querySelector('.bg');
+        const moon = document.querySelector('.moon');
+
+        container.addEventListener('click', () => {
+            if (currentIndex < texts.length - 1) {
+                texts[currentIndex].classList.add('hilang');
+                texts[++currentIndex].classList.remove('hilang');
+                }
+            }
+        );
+
+        sun.addEventListener('click', () => {
+            bg.style.background = 'linear-gradient(#242B4B,  #0B1026)';
+            texts.forEach(text => text.querySelector('p').classList.add('light'));
+            sun.classList.add('keluar');
+            moon.classList.add('masuk');
+            container.style.background = 'url(pohonmalam.gif)';
+            container.style.backgroundSize = 'cover';
+            container.style.backgroundRepeat = 'no-repeat';
+            setTimeout(() => {
+                moon.classList.add('gerak');
+            }, 2000);
+
+        });
+    </script>
+</body>
+</body>
+
+</html>
